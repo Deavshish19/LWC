@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Order Summary">
+        <template if:true={showOrder}>
+            <div class="slds-m-around_medium">
+                <p><strong>Order Number:</strong> {showOrder.OrderNumber}</p>
+                <p><strong>Customer Name:</strong> {showOrder.Account.Name}</p>
+                <p><strong>Total Quantity:</strong> {showOrder.Total_Quantity__c}</p>
+            </div>
+        </template>
+        <template if:true={showOrderItems}>
+            <h1 class="slds-m-around_medium">Order Product Details:</h1>
+            <lightning-datatable class="slds-m-around_medium"
+                key-field="id"
+                data={showOrderItems}
+                columns={columns}
+                hide-checkbox-column="true">
+            </lightning-datatable>
+        </template>
+        <template if:false={showOrder}>
+            <p>No order data available.</p>
+        </template>
+    </lightning-card>
+</template>
