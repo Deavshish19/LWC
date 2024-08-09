@@ -1,0 +1,11 @@
+.TaskName{
+    font-size: large;
+}
+
+.incompleteTask{
+    background-color: rgb(236, 239, 195);
+}
+
+.completedTask{
+    background-color: rgb(134, 230, 134);
+}
