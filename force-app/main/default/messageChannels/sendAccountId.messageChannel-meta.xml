@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+   <masterLabel>Send AccountId</masterLabel>
+   <isExposed>true</isExposed>
+   <description>This Lightning Message Channel sends Account Id to contact Browser</description>
+   <lightningMessageFields>
+       <fieldName>accountIdFromFilter</fieldName>
+       <description>Account id of selected Account</description>
+   </lightningMessageFields>
+
+</LightningMessageChannel>

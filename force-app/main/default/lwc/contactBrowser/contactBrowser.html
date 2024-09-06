@@ -1,0 +1,23 @@
+<template>
+    <lightning-card>
+        <!-- Filter Section -->
+        <div>
+            <c-contact-filter onfilterchange = {handleFilterChange}></c-contact-filter> 
+        </div>
+
+        <!-- Tabset Section -->
+        <template lwc:if={idOfAccount}>
+            <div>
+                <lightning-tabset>
+                    <lightning-tab label="Grid">
+                        <c-contact-grid selected-account-id = {idOfAccount}>
+                        </c-contact-grid>
+                    </lightning-tab>
+                    <lightning-tab label="Gallery" title="2nd tab extended title">
+                        Two Content !
+                    </lightning-tab>
+                </lightning-tabset>
+            </div>
+        </template>
+    </lightning-card>
+</template>

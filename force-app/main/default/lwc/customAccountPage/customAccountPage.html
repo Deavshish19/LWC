@@ -1,0 +1,56 @@
+<template>
+    <lightning-card title="Account" >
+        <div class="slds-var-p-around_small">
+            <lightning-combobox
+                name="parentAcc"
+                label="Parent Account"
+                placeholder="Select Account"
+                options={parentOptions}
+                onchange={handleChange} 
+                value={selectedParentAcc}
+                required
+                class="validate">
+            </lightning-combobox>
+
+            <lightning-input 
+                label="Account Name"
+                name="accName"
+                type="text"
+                onchange={handleChange}
+                value={accName}
+                required
+                class="validate"
+            ></lightning-input>
+
+            <lightning-input 
+                type="date"
+                label="SLA Expiration Date"
+                name="slaexpdate"
+                value={slaExpDate}
+                onchange={handleChange}>
+            </lightning-input>
+            
+            <lightning-radio-group 
+                name="slatype"
+                label="SLA Type"
+                options={slaPicklistOptions}
+                type="button"
+                value={slaType}
+                onchange={handleChange}>
+            </lightning-radio-group>
+
+            <lightning-input-rich-text 
+            label="Description" 
+            label-visible
+            name="accdescription"
+            value={accDecription}
+            disabled-categories = 'FORMAT_FONT'
+            onchange={handleChange}>
+            </lightning-input-rich-text>
+        </div>
+
+        <div class="slds-var-p-around_medium">
+            <lightning-button label="Save" variant="brand" onclick={handleSave}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

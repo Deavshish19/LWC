@@ -1,0 +1,13 @@
+<template>
+    <template lwc:if={showContact}>
+        <div>
+            <lightning-datatable
+                    key-field="id"
+                    data={contactData}
+                    columns={columns}
+                    hide-checkbox-column
+                    is-loading= {isLoading}>
+            </lightning-datatable>
+        </div>
+    </template>
+</template>

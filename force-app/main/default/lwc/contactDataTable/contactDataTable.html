@@ -1,0 +1,20 @@
+<template>
+    <c-custom-data-table-type
+        key-field="Id"
+        columns={cols}
+        data={relatedConData}
+        draft-values={draftValuesArray}
+        onsave={handleSave}
+        onrowaction={handleRowAction}>
+    </c-custom-data-table-type>
+
+    <template lwc:if={isModalOpen}>
+        <c-edit-contact-form
+            onclosemodal={handleCloseModal}
+            record-input-id={selectedContactRecord}
+            fields-to-display = {fieldvalue}
+            is-edit-mode={editMode}
+            is-view-mode={viewMode}>
+        </c-edit-contact-form>
+    </template>
+</template>

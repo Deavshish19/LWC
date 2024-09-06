@@ -1,5 +1,6 @@
 import { LightningElement, wire } from 'lwc';
 import getContactList from '@salesforce/apex/DataTableController.getContactList';
+import CONTACT_IMAGES from '@salesforce/resourceUrl/Image';
 const columns = [
     {label:'Name', type: "customName",
         typeAttributes: {
@@ -48,8 +49,8 @@ export default class CustomDataTableStyle extends LightningElement {
                 let accountLink = '/'+record.AccountId;
                 let accountName = record.Account.Name;
                 let rankIcon = record.Rank__c > 5 ? "utility:ribbon" : "";
-                let contactUrl = record.Picture__c;
-                console.log('URL1', contactUrl);
+                let contactUrl = CONTACT_IMAGES;
+                console.log('URL', contactUrl);
                 return {
                     ...record,
                     accountName : accountName,

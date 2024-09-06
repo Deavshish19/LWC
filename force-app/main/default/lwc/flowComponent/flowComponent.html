@@ -1,0 +1,9 @@
+<template>
+    <template lwc:if={inputRecordId}>
+        <lightning-card title="Flow Form">
+            <div class="slds-var-p-around_small">
+                <lightning-record-form object-api-name='Contact' record-id={inputRecordId} layout-type="Compact"></lightning-record-form>
+            </div>
+        </lightning-card>
+    </template>
+</template>
